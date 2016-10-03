@@ -18,7 +18,9 @@
   "homepage": "https://github.com/daveharmswebdev/sockettesting#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "bower": "^1.7.9",
     "express": "^4.14.0",
+    "mongoose": "^4.6.2",
     "socket.io": "^1.4.8"
   }
 }
