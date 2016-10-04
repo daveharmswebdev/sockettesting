@@ -3,9 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-	<h1>Hello World!</h1>
+	<div class="container" ng-app="davechat">
+		<div ng-view></div>
+	</div>
 
+	<script src="./lib/angular/angular.min.js"></script>
+	<script src="./lib/angular-route/angular-route.min.js"></script>
+	<script src="./lib/socket.io-client/socket.io.js"></script>
+	<script src="./app/main.js"></script>
+	<!-- factories -->
+	<script src="./app/factory/socket.js"></script>
+	<!-- controllers -->
+	<script src="./app/controllers/main.js"></script>
 </body>
 </html>
