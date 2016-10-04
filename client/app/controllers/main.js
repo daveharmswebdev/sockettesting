@@ -1,15 +1,20 @@
 'use strict'
 
-app.controller('mainCtrl', function($scope, socketFactory) {
+app.controller('mainCtrl', function($scope, $http, socketFactory) {
+
+	$http.get('/api/messages')
 
 	socketFactory.on('connect', () => console.log(`socket connected ${socketFactory.id}`))
-	// socketFactory.on('disconnect', console.log(`socket disconnected ${socketFactory.id}`))
 
 	$scope.submitMessage = () => {
 		const message = { 
 			author: $scope.author,
 			content: $scope.content
 		}
-		console.log('message', message)
+		socketFactory.emit('newMessage', message)
 	}
+
+	socketFactory.on('publishMessage', message => {
+		console.log('publishMessage', message)
+	})
 })
