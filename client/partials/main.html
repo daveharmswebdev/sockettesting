@@ -1,5 +1,9 @@
 <h1>Hello World</h1>
 
+<ul>
+	<li ng-repeat="message in messages">{{message.author}} -- {{message.content}}</li>
+</ul>
+
 <form ng-submit="submitMessage()">
 	<input type="text" ng-model="author" placeholder="Your name" />
 	<input type="text" ng-model="content" placeholder="Your message" />

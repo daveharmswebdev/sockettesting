@@ -18,7 +18,6 @@ app.use(express.static('client'))
 app.use(json())
 
 app.get('/api/messages', (req, res, err) => {
-	res.json({ response: 'hello world' })
 	Message
 		.find()
 		.then( data => res.json(data))
