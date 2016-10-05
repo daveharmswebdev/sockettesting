@@ -2,7 +2,7 @@
 
 const app = angular.module('davechat', ['ngRoute'])
 
-app.config(($routeProvider) => {
+app.config( ($routeProvider) => {
 	$routeProvider
 		.when('/', {
 			controller: 'mainCtrl',

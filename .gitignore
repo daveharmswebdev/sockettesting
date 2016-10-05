@@ -37,4 +37,7 @@ jspm_packages
 .node_repl_history
 
 node_modules
+client/js
+client/css
+
 
